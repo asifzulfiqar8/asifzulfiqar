@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+h4 {
+    font: 700 64px/74px 'Bungee Spice', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
