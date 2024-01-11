@@ -5,9 +5,19 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: #1a1818;
+  color: #ece7e1;
+}
+
+::selection {
+  background: #1a1818;
+  color: #ece7e1;
+}
+
 body {
   position: relative;
-  background: #F7F7F7;
+  background: #ece7e1;
 }
 
 .container-fluid {
@@ -16,22 +26,28 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .bg-color {
-  background: #F7F7F7;
+  background: #ece7e1;
+}
+
+.secondary-color {
+  background: #1a1818;
 }
 
 .text-bg {
-  color: #F7F7F7;
+  color: #ece7e1;
 }
 
-.jakarta.font {
-  font-family: "Plus Jakarta Sans", sans-serif;
+.text-secondary {
+  color: #1a1818;
+}
+
+.mabry-font {
+  font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
 }
 
 .julius.font {
@@ -40,14 +56,11 @@ body {
 
 header .logo {
   z-index: 9;
-  color: #000;
+  color: #ece7e1;
   font-size: 22px;
-  line-height: 30px;
-  font-weight: 700;
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-header .logo.active {
-  color: #F7F7F7;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
 }
 header .hamburger {
   cursor: pointer;
@@ -60,7 +73,7 @@ header .hamburger:hover .line:first-child {
 header .hamburger .line {
   width: 20px;
   height: 1.2px;
-  background: #000;
+  background: #ece7e1;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -71,7 +84,6 @@ header .hamburger .line:first-child.active {
   transform: translateY(7px) scale(1) rotate(-45deg);
 }
 header .hamburger .line.active {
-  background: #F7F7F7;
   transform: translateY(0) scale(1) rotate(45deg);
 }
 header .nav-links {
@@ -79,7 +91,7 @@ header .nav-links {
   top: 0;
   left: 0;
   height: 0;
-  margin-top: -80px;
+  margin-top: -180px;
 }
 header .nav-links.active {
   height: 100vh;

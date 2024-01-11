@@ -3,14 +3,20 @@
 $primaryColor: #FFA901;
 $black: #000;
 $white: #fff;
-$bgColor : #F7F7F7;
+$bgColor : #ece7e1;
+$secondaryColor : #1a1818;
 $juliusFont: 'Julius Sans', sans-serif;
-$jakartaFont: 'Plus Jakarta Sans', sans-serif;
+$mabryFont: 'Mabry Pro', 'Plus Jakarta Sans', sans-serif;
+$grandSlangFont : 'GrandSlang-Roman', cursive;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+::selection {
+    background: $secondaryColor;
+    color: $bgColor;
 }
 body {
     position: relative;
@@ -21,19 +27,23 @@ body {
     padding: 0 15px;
 }
 .container {
-    width: 100%;
-    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
 .bg-color {
     background: $bgColor;
 }
+.secondary-color {
+    background: $secondaryColor;
+}
 .text-bg {
     color: $bgColor;
 }
-.jakarta.font {
-    font-family: $jakartaFont;
+.text-secondary {
+    color: $secondaryColor;
+}
+.mabry-font {
+    font-family: $mabryFont;
 }
 .julius.font {
     font-family: $juliusFont;
@@ -41,14 +51,11 @@ body {
 header {
     .logo {
         z-index: 9;
-        color: $black;
+        color: $bgColor;
         font-size: 22px;
-        line-height: 30px;
-        font-weight: 700;
-        font-family: $jakartaFont;
-        &.active {
-            color: $bgColor;
-        }
+        line-height: 20px;
+        font-weight: 400;
+        font-family: $mabryFont;
     }
     .hamburger {
         cursor: pointer;
@@ -60,7 +67,7 @@ header {
         .line {
             width: 20px;
             height: 1.2px;
-            background: $black;
+            background: $bgColor;
             display: block;
             transition: transform .5s ease;
             &:first-child {
@@ -70,7 +77,6 @@ header {
                 transform: translateY(7px) scale(1) rotate(-45deg);
             }
             &.active {
-                background: $bgColor;
                 transform: translateY(0) scale(1) rotate(45deg);
             }
         }
@@ -80,7 +86,7 @@ header {
         top: 0;
         left: 0;
         height: 0;
-        margin-top: -80px;
+        margin-top: -180px;
         &.active {
             height: 100vh;
             margin-top: 0;
