@@ -1,12 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
-
-h4 {
-    font: 800 2vw/3vw 'Plus Jakarta Sans', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    text-transform: uppercase;
-    text-wrap: wrap;
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  position: relative;
+  background: #F7F7F7;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-color {
+  background: #F7F7F7;
+}
+
+.text-bg {
+  color: #F7F7F7;
+}
+
+.jakarta.font {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.julius.font {
+  font-family: "Julius Sans", sans-serif;
+}
+
+header .logo {
+  z-index: 9;
+  color: #000;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+header .logo.active {
+  color: #F7F7F7;
+}
+header .hamburger {
+  cursor: pointer;
+  padding: 10px;
+  z-index: 9;
+}
+header .hamburger:hover .line:first-child {
+  margin-bottom: 5px;
+}
+header .hamburger .line {
+  width: 20px;
+  height: 1.2px;
+  background: #000;
+  display: block;
+  transition: transform 0.5s ease;
+}
+header .hamburger .line:first-child {
+  margin-bottom: 6px !important;
+}
+header .hamburger .line:first-child.active {
+  transform: translateY(7px) scale(1) rotate(-45deg);
+}
+header .hamburger .line.active {
+  background: #F7F7F7;
+  transform: translateY(0) scale(1) rotate(45deg);
+}
+header .nav-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  margin-top: -80px;
+}
+header .nav-links.active {
+  height: 100vh;
+  margin-top: 0;
+}/*# sourceMappingURL=style.css.map */

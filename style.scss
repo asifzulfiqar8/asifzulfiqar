@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+$primaryColor: #FFA901;
+$black: #000;
+$white: #fff;
+$bgColor : #F7F7F7;
+$juliusFont: 'Julius Sans', sans-serif;
+$jakartaFont: 'Plus Jakarta Sans', sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    background: $bgColor;
+}
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bg-color {
+    background: $bgColor;
+}
+.text-bg {
+    color: $bgColor;
+}
+.jakarta.font {
+    font-family: $jakartaFont;
+}
+.julius.font {
+    font-family: $juliusFont;
+}
+header {
+    .logo {
+        z-index: 9;
+        color: $black;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 700;
+        font-family: $jakartaFont;
+        &.active {
+            color: $bgColor;
+        }
+    }
+    .hamburger {
+        cursor: pointer;
+        padding: 10px;
+        z-index: 9;
+        &:hover .line:first-child {
+            margin-bottom: 5px;
+        }
+        .line {
+            width: 20px;
+            height: 1.2px;
+            background: $black;
+            display: block;
+            transition: transform .5s ease;
+            &:first-child {
+                margin-bottom: 6px !important;
+            }
+            &:first-child.active {
+                transform: translateY(7px) scale(1) rotate(-45deg);
+            }
+            &.active {
+                background: $bgColor;
+                transform: translateY(0) scale(1) rotate(45deg);
+            }
+        }
+    }
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        margin-top: -80px;
+        &.active {
+            height: 100vh;
+            margin-top: 0;
+        }
+    }
+}
