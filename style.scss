@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 $primaryColor: #FFA901;
 $black: #000;
@@ -7,7 +7,8 @@ $bgColor : #ece7e1;
 $secondaryColor : #1a1818;
 $juliusFont: 'Julius Sans', sans-serif;
 $mabryFont: 'Mabry Pro', 'Plus Jakarta Sans', sans-serif;
-$grandSlangFont : 'GrandSlang-Roman', cursive;
+$grandSlangFont : 'GrandSlang-Roman', 'Mabry Pro', sans-serif;
+$montserratFont : 'Montserrat', 'Julius Sans', sans-serif;
 
 * {
     padding: 0;
@@ -45,14 +46,17 @@ body {
 .mabry-font {
     font-family: $mabryFont;
 }
-.julius.font {
-    font-family: $juliusFont;
+.grandslang-font {
+    font-family: $grandSlangFont;
+}
+.montserrat-font {
+    font-family: $montserratFont;
 }
 header {
     .logo {
         z-index: 9;
         color: $bgColor;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 20px;
         font-weight: 400;
         font-family: $mabryFont;
@@ -90,6 +94,20 @@ header {
         &.active {
             height: 100vh;
             margin-top: 0;
+        }
+    }
+}
+.hero-content {
+    .social-links svg {
+        width: 33px;
+        height: 33px;
+        fill: $secondaryColor;
+        transition: all .8s ease;
+        &:hover {
+            fill: $bgColor;
+            background: $secondaryColor;
+            padding: 5px;
+            border-radius: 30px;
         }
     }
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Plus+Jakarta+Sans&family=Montserrat:wght@400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -50,14 +50,18 @@ body {
   font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
 }
 
-.julius.font {
-  font-family: "Julius Sans", sans-serif;
+.grandslang-font {
+  font-family: "GrandSlang-Roman", "Mabry Pro", sans-serif;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", "Julius Sans", sans-serif;
 }
 
 header .logo {
   z-index: 9;
   color: #ece7e1;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
@@ -96,4 +100,17 @@ header .nav-links {
 header .nav-links.active {
   height: 100vh;
   margin-top: 0;
+}
+
+.hero-content .social-links svg {
+  width: 33px;
+  height: 33px;
+  fill: #1a1818;
+  transition: all 0.8s ease;
+}
+.hero-content .social-links svg:hover {
+  fill: #ece7e1;
+  background: #1a1818;
+  padding: 5px;
+  border-radius: 30px;
 }/*# sourceMappingURL=style.css.map */
