@@ -26,6 +26,7 @@ body {
 }
 
 .container {
+  max-width: 1440px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -58,6 +59,45 @@ body {
   font-family: "Montserrat", "Julius Sans", sans-serif;
 }
 
+.button {
+  height: 45px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #1a1818;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #1a1818;
+  transition: all 0.8s ease-in-out;
+}
+.button .btn-txt {
+  z-index: 1;
+  letter-spacing: 4px;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s ease-in-out;
+  background-color: #1a1818;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+.button:hover {
+  box-shadow: 1px 1px 200px #1a1818;
+  color: #ece7e1;
+  border: none;
+}
+.button:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
 header .logo {
   z-index: 9;
   color: #ece7e1;
@@ -68,8 +108,10 @@ header .logo {
 }
 header .hamburger {
   cursor: pointer;
-  padding: 10px;
+  padding: 13px;
   z-index: 9;
+  background: #ece7e1;
+  border-radius: 99px;
 }
 header .hamburger:hover .line:first-child {
   margin-bottom: 5px;
@@ -77,7 +119,7 @@ header .hamburger:hover .line:first-child {
 header .hamburger .line {
   width: 20px;
   height: 1.2px;
-  background: #ece7e1;
+  background: #1a1818;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -85,10 +127,10 @@ header .hamburger .line:first-child {
   margin-bottom: 6px !important;
 }
 header .hamburger .line:first-child.active {
-  transform: translateY(7px) scale(1) rotate(-45deg);
+  transform: translateY(3px) scale(1) rotate(-45deg);
 }
 header .hamburger .line.active {
-  transform: translateY(0) scale(1) rotate(45deg);
+  transform: translateY(-3px) scale(1) rotate(45deg);
 }
 header .nav-links {
   position: absolute;

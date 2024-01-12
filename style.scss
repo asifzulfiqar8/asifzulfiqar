@@ -28,6 +28,7 @@ body {
     padding: 0 15px;
 }
 .container {
+    max-width: 1440px !important;
     margin-left: auto;
     margin-right: auto;
 }
@@ -52,6 +53,44 @@ body {
 .montserrat-font {
     font-family: $montserratFont;
 }
+.button {
+    height: 45px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid $secondaryColor;
+    overflow: hidden;
+    border-radius: 30px;
+    color: $secondaryColor;
+    transition: all .8s ease-in-out;
+    .btn-txt {
+        z-index: 1;
+        letter-spacing: 4px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 1s ease-in-out;
+        background-color: $secondaryColor;
+        border-radius: 30px;
+        visibility: hidden;
+        height: 10px;
+        width: 10px;
+        z-index: -1;
+      }
+      &:hover {
+        box-shadow: 1px 1px 200px $secondaryColor;
+        color: $bgColor;
+        border: none;
+      }
+      &:hover::after {
+        visibility: visible;
+        transform: scale(100) translateX(2px);
+      }
+  }
 header {
     .logo {
         z-index: 9;
@@ -63,25 +102,27 @@ header {
     }
     .hamburger {
         cursor: pointer;
-        padding: 10px;
+        padding: 13px;
         z-index: 9;
+        background: $bgColor;
+        border-radius: 99px;
         &:hover .line:first-child {
             margin-bottom: 5px;
         }
         .line {
             width: 20px;
             height: 1.2px;
-            background: $bgColor;
+            background: $secondaryColor;
             display: block;
             transition: transform .5s ease;
             &:first-child {
                 margin-bottom: 6px !important;
             }
             &:first-child.active {
-                transform: translateY(7px) scale(1) rotate(-45deg);
+                transform: translateY(3px) scale(1) rotate(-45deg);
             }
             &.active {
-                transform: translateY(0) scale(1) rotate(45deg);
+                transform: translateY(-3px) scale(1) rotate(45deg);
             }
         }
     }
