@@ -107,7 +107,7 @@ header {
         background: $bgColor;
         border-radius: 99px;
         &:hover .line:first-child {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         .line {
             width: 20px;
@@ -116,7 +116,7 @@ header {
             display: block;
             transition: transform .5s ease;
             &:first-child {
-                margin-bottom: 6px !important;
+                margin-bottom: 6px;
             }
             &:first-child.active {
                 transform: translateY(3px) scale(1) rotate(-45deg);
