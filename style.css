@@ -89,7 +89,7 @@ body {
   z-index: -1;
 }
 .button:hover {
-  box-shadow: 1px 1px 200px #1a1818;
+  box-shadow: 2px 2px 150px #1a1818;
   color: #ece7e1;
   border: none;
 }
@@ -98,7 +98,12 @@ body {
   transform: scale(100) translateX(2px);
 }
 
-header .logo {
+.header {
+  position: fixed;
+  top: 0;
+  transition: top 0.5s;
+}
+.header .logo {
   z-index: 9;
   color: #ece7e1;
   font-size: 20px;
@@ -106,47 +111,47 @@ header .logo {
   font-weight: 400;
   font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
 }
-header .hamburger {
+.header .hamburger {
   cursor: pointer;
   padding: 12px;
   z-index: 9;
   background: #ece7e1;
   border-radius: 99px;
 }
-header .hamburger:hover .line:first-child {
+.header .hamburger:hover .line:first-child {
   margin-bottom: 6px;
 }
-header .hamburger .line {
+.header .hamburger .line {
   width: 20px;
   height: 0.02rem;
   background: #1a1818;
   display: block;
   transition: transform 0.5s ease;
 }
-header .hamburger .line:first-child {
+.header .hamburger .line:first-child {
   margin-bottom: 6px;
 }
-header .hamburger .line:first-child.active {
+.header .hamburger .line:first-child.active {
   transform: translateY(3px) scale(1) rotate(-45deg);
 }
-header .hamburger .line.active {
+.header .hamburger .line.active {
   transform: translateY(-3px) scale(1) rotate(45deg);
 }
-header .nav-links {
+.header .nav-links {
   position: absolute;
   top: 0;
   left: 0;
   height: 0;
   margin-top: -180px;
 }
-header .nav-links.active {
+.header .nav-links.active {
   height: 100vh;
   margin-top: 0;
 }
 
 .hero-content .social-links svg {
-  width: 33px;
-  height: 33px;
+  width: 45px;
+  height: 45px;
   fill: #1a1818;
   transition: all 0.8s ease;
 }
@@ -154,5 +159,5 @@ header .nav-links.active {
   fill: #ece7e1;
   background: #1a1818;
   padding: 5px;
-  border-radius: 30px;
+  border-radius: 99px;
 }/*# sourceMappingURL=style.css.map */

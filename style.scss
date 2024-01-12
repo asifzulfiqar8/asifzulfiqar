@@ -82,7 +82,7 @@ body {
         z-index: -1;
       }
       &:hover {
-        box-shadow: 1px 1px 200px $secondaryColor;
+        box-shadow: 2px 2px 150px $secondaryColor;
         color: $bgColor;
         border: none;
       }
@@ -91,7 +91,10 @@ body {
         transform: scale(100) translateX(2px);
       }
   }
-header {
+.header {
+    position: fixed;
+    top: 0;
+    transition: top 0.5s;
     .logo {
         z-index: 9;
         color: $bgColor;
@@ -140,15 +143,15 @@ header {
 }
 .hero-content {
     .social-links svg {
-        width: 33px;
-        height: 33px;
+        width: 45px;
+        height: 45px;
         fill: $secondaryColor;
         transition: all .8s ease;
         &:hover {
             fill: $bgColor;
             background: $secondaryColor;
             padding: 5px;
-            border-radius: 30px;
+            border-radius: 99px;
         }
     }
 }
