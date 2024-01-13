@@ -171,14 +171,12 @@ body {
         border-radius: 4px;
         transition: box-shadow .5s ease;
         cursor: pointer;
-        &:hover {
-            box-shadow: .25rem .25rem 0rem $secondaryColor;
-        }
         .project-img {
             width: 100%;
             height: 260px;
             object-fit: cover;
             border-radius: 4px 4px 0 0;
+            transition: filter .5s ease;
         }
         .view-box {
             background: #1a1818c9;
@@ -210,6 +208,9 @@ body {
         }
         &:hover .view-link {
             opacity: 1;
+        }
+        &:hover .project-img, &:hover h4, &:hover p {
+            filter: blur(4px);
         }
     }
 }
