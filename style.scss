@@ -95,6 +95,7 @@ body {
     position: sticky;
     top: 0;
     transition: top 0.5s;
+    z-index: 1;
     .logo {
         z-index: 9;
         color: $bgColor;
@@ -139,6 +140,13 @@ body {
         &.active {
             height: 100vh;
             margin-top: 0;
+        }
+        .nav-link {
+            opacity: 0;
+            transition: opacity .2s;
+        }
+        &.active .nav-link {
+            opacity: 1;
         }
     }
 }
