@@ -247,10 +247,11 @@ body {
         height: 100%;
         h4 {
             text-wrap: nowrap;
+            color: $bgColor;
         }
         .text-stroke {
             color: transparent;
-            -webkit-text-stroke: 2px $secondaryColor;
+            -webkit-text-stroke: 2px $bgColor;
         }
     }
     

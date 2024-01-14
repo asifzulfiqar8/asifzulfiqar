@@ -253,8 +253,9 @@ body {
 }
 .skills .skills-items h4 {
   text-wrap: nowrap;
+  color: #ece7e1;
 }
 .skills .skills-items .text-stroke {
   color: transparent;
-  -webkit-text-stroke: 2px #1a1818;
+  -webkit-text-stroke: 2px #ece7e1;
 }/*# sourceMappingURL=style.css.map */
