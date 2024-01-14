@@ -2,16 +2,24 @@
 const hamburger = document.querySelector('.hamburger');
 
 hamburger.addEventListener('click', () => {
-    const hamburderLines = document.querySelectorAll('.line');
+    const hamburgerLines = document.querySelectorAll('.line');
     const navLinks = document.querySelector('.nav-links');
-    const logoText = document.querySelector('.logo');
+    const links = document.querySelectorAll('.nav-link');
 
-    hamburderLines.forEach((line) => {
+    hamburgerLines.forEach((line) => {
         line.classList.toggle('active');
     });
 
     navLinks.classList.toggle('active');
-    logoText.classList.toggle('active');
+
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburgerLines.forEach((line) => {
+                line.classList.remove('active');
+            })
+        })
+    })
 })
 
 let prevScrollPos = window.pageYOffset;
@@ -28,4 +36,5 @@ window.onscroll = () => {
 
     prevScrollPos = currentScrollPos;
 };
+
 

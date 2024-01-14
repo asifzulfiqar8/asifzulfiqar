@@ -171,6 +171,30 @@ body {
   border-radius: 99px;
 }
 
+.hero-img {
+  width: 62%;
+  height: auto;
+}
+
+.animate-float-y {
+  animation-name: float-y;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 1s ease !important;
+}
+
+@keyframes float-y {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
 .projects .project-box {
   position: relative;
   border: 1px solid #1a1818;
@@ -202,8 +226,8 @@ body {
   color: #ece7e1;
   border: 1px solid #ece7e1;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  display: none;
+  transition: display 0.5s ease;
   transition: all 0.5s ease;
   border-radius: 99px;
 }
@@ -215,8 +239,22 @@ body {
   height: 100%;
 }
 .projects .project-box:hover .view-link {
-  opacity: 1;
+  display: block;
 }
 .projects .project-box:hover .project-img, .projects .project-box:hover h4, .projects .project-box:hover p {
   filter: blur(4px);
+}
+
+.skills {
+  overflow: hidden;
+}
+.skills .skills-items {
+  height: 100%;
+}
+.skills .skills-items h4 {
+  text-wrap: nowrap;
+}
+.skills .skills-items .text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px #1a1818;
 }/*# sourceMappingURL=style.css.map */
