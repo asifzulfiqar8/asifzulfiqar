@@ -42,10 +42,27 @@ const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
 
 const updateCursor = (e) => {
+    
     cursor.style.top = e.pageY + 'px';
     cursor.style.left = e.pageX + 'px';
     cursorDot.style.top = e.pageY + 'px';
     cursorDot.style.left = e.pageX + 'px';
 }
+
+const header = document.querySelector('.black-background');
+
+header.addEventListener('mouseenter', () => {
+    cursor.style.display = 'none';
+    cursorDot.style.background = '#ece7e1';
+    cursorDot.style.width = '80px';
+    cursorDot.style.height = '80px';
+    
+})
+header.addEventListener('mouseleave', () => {
+    cursor.style.display = 'block';
+    cursorDot.style.background = '#1a1818';
+    cursorDot.style.width = '10px';
+    cursorDot.style.height = '10px';
+})
 
 window.addEventListener('mousemove', updateCursor);
