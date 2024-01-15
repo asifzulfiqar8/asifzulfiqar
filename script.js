@@ -49,20 +49,23 @@ const updateCursor = (e) => {
     cursorDot.style.left = e.pageX + 'px';
 }
 
-const header = document.querySelector('.black-background');
+const blackBg = document.querySelectorAll('.black-background');
 
-header.addEventListener('mouseenter', () => {
-    cursor.style.display = 'none';
-    cursorDot.style.background = '#ece7e1';
-    cursorDot.style.width = '80px';
-    cursorDot.style.height = '80px';
-    
+blackBg.forEach((bg) => {
+    bg.addEventListener('mouseenter', () => {
+        cursor.style.display = 'none';
+        cursorDot.style.background = '#ece7e1';
+        cursorDot.style.width = '80px';
+        cursorDot.style.height = '80px';
+        
+    })
+    bg.addEventListener('mouseleave', () => {
+        cursor.style.display = 'block';
+        cursorDot.style.background = '#1a1818';
+        cursorDot.style.width = '10px';
+        cursorDot.style.height = '10px';
+    })
 })
-header.addEventListener('mouseleave', () => {
-    cursor.style.display = 'block';
-    cursorDot.style.background = '#1a1818';
-    cursorDot.style.width = '10px';
-    cursorDot.style.height = '10px';
-})
+
 
 window.addEventListener('mousemove', updateCursor);
