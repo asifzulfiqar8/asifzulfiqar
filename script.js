@@ -53,18 +53,14 @@ const blackBg = document.querySelectorAll('.black-background');
 
 blackBg.forEach((bg) => {
     bg.addEventListener('mouseenter', () => {
-        cursor.style.display = 'none';
-        cursorDot.style.background = '#ece7e1';
-        cursorDot.style.width = '80px';
-        cursorDot.style.height = '80px';
-        
-    })
-    bg.addEventListener('mouseleave', () => {
-        cursor.style.display = 'block';
-        cursorDot.style.background = '#1a1818';
-        cursorDot.style.width = '10px';
-        cursorDot.style.height = '10px';
-    })
+    cursor.style.borderColor = '#ece7e1';
+    cursorDot.style.background = '#ece7e1';
+    
+})
+bg.addEventListener('mouseleave', () => {
+    cursor.style.borderColor = '#1a1818';
+    cursorDot.style.background = '#1a1818';
+})
 })
 
 

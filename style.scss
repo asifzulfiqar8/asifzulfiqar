@@ -288,6 +288,7 @@ body {
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: all .5s ease;
+    z-index: 9999;
 }
 .cursor-dot {
     width: 10px;
@@ -298,6 +299,7 @@ body {
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: all .2s ease;
+    z-index: 9999;
 }
 @media screen and (max-width:576px) {
     .projects {
