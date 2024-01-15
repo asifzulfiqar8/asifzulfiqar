@@ -20,8 +20,7 @@ $montserratFont : 'Montserrat', 'Julius Sans', sans-serif;
 body {
     position: relative;
     background: $bgColor;
-    // cursor: none;
-    pointer-events: auto;
+    cursor: none;
 }
 .container-fluid {
     width: 100%;
@@ -287,7 +286,7 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: all .5s ease;
+    transition: all .3s ease;
     z-index: 9999;
 }
 .cursor-dot {

@@ -18,7 +18,7 @@
 body {
   position: relative;
   background: #ece7e1;
-  pointer-events: auto;
+  cursor: none;
 }
 
 .container-fluid {
@@ -290,7 +290,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   z-index: 9999;
 }
 
