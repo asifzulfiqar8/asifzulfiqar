@@ -37,4 +37,15 @@ window.onscroll = () => {
     prevScrollPos = currentScrollPos;
 };
 
+// Cursor js
+const cursor = document.querySelector('.cursor');
+const cursorDot = document.querySelector('.cursor-dot');
 
+const updateCursor = (e) => {
+    cursor.style.top = e.pageY + 'px';
+    cursor.style.left = e.pageX + 'px';
+    cursorDot.style.top = e.pageY + 'px';
+    cursorDot.style.left = e.pageX + 'px';
+}
+
+window.addEventListener('mousemove', updateCursor);
