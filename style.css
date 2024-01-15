@@ -171,11 +171,6 @@ body {
   border-radius: 99px;
 }
 
-.hero-img {
-  width: 62%;
-  height: auto;
-}
-
 .animate-float-y {
   animation-name: float-y;
   animation-duration: 3s;
@@ -258,4 +253,33 @@ body {
 .skills .skills-items .text-stroke {
   color: transparent;
   -webkit-text-stroke: 2px #ece7e1;
+}
+
+.contact .form input, .contact .form textarea {
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #1a1818;
+  border-radius: 4px;
+  color: #1a1818;
+  font-size: 15px;
+  transition: box-shadow 0.8s ease;
+}
+.contact .form input:focus, .contact .form textarea:focus {
+  outline: none;
+  box-shadow: 0.25rem 0.25rem 0rem #1a1818;
+}
+.contact .form input::-moz-placeholder, .contact .form textarea::-moz-placeholder {
+  font-size: 15px;
+  font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
+}
+.contact .form input::placeholder, .contact .form textarea::placeholder {
+  font-size: 15px;
+  font-family: "Mabry Pro", "Plus Jakarta Sans", sans-serif;
+}
+.contact .form .btn {
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.contact .form .btn:hover {
+  box-shadow: 0.25rem 0.25rem 0rem #1a1818;
 }/*# sourceMappingURL=style.css.map */

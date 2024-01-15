@@ -162,10 +162,6 @@ body {
         }
     }
 }
-.hero-img {
-    width: 62%;
-    height: auto;
-}
 .animate-float-y {
     -webkit-animation-name: float-y;
     animation-name: float-y;
@@ -255,4 +251,34 @@ body {
         }
     }
     
+}
+.contact {
+    .form {
+        input, textarea {
+            padding: 15px;
+            background: transparent;
+            border: 1px solid $secondaryColor;
+            border-radius: 4px;
+            color: $secondaryColor;
+            font-size: 15px;
+            transition: box-shadow .8s ease;
+            &:focus {
+                outline: none;
+                box-shadow: .25rem .25rem 0rem $secondaryColor;
+            }
+        }
+        input::placeholder, textarea::placeholder {
+            font-size: 15px;
+            font-family: $mabryFont;
+        }
+        .btn {
+            cursor: pointer;
+            transition: all .8s ease;
+            &:hover {
+                // background: $secondaryColor;
+                // color: $bgColor;
+                box-shadow: .25rem .25rem 0rem $secondaryColor;
+            }
+        }
+    }
 }
