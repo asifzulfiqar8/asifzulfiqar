@@ -240,6 +240,7 @@ body {
     overflow: hidden;
     .skills-items {
         height: 100%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)2s;
         h4 {
             text-wrap: nowrap;
             color: $bgColor;
@@ -307,6 +308,16 @@ body {
         .project-box {
             .project-img {
                 height: 290px;
+            }
+        }
+    }
+    .cursor, .cursor-dot {
+        display: none;
+    }
+    .skills {
+        .skills-items {
+            .text-stroke {
+                -webkit-text-stroke: 0.5px $bgColor;
             }
         }
     }

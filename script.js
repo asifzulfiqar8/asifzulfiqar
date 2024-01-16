@@ -97,3 +97,20 @@ cursorOut.forEach((out) => {
 
 // Event listener for updating cursor position on mouse move
 window.addEventListener('mousemove', updateCursor);
+
+
+// Skills animation
+var tl = gsap.timeline({scrollTrigger:{
+    duration: 0.8,
+    trigger: '.skills',
+    start: "0% 90%",
+    end: "450% 90%",
+    scrub: true
+}})
+
+tl.to(".to-left", {
+    marginLeft: "-40%",
+}, 'skills')
+tl.to(".to-right", {
+    marginRight: "-50%",
+}, 'skills')

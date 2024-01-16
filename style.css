@@ -244,6 +244,7 @@ body {
 }
 .skills .skills-items {
   height: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
 }
 .skills .skills-items h4 {
   text-wrap: nowrap;
@@ -311,6 +312,12 @@ body {
 @media screen and (max-width: 576px) {
   .projects .project-box .project-img {
     height: 290px;
+  }
+  .cursor, .cursor-dot {
+    display: none;
+  }
+  .skills .skills-items .text-stroke {
+    -webkit-text-stroke: 0.5px #ece7e1;
   }
 }
 @media screen and (max-width: 425px) {
