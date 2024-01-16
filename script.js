@@ -113,4 +113,52 @@ tl.to(".to-left", {
 }, 'skills')
 tl.to(".to-right", {
     marginRight: "-50%",
-}, 'skills')
+}, 'skills');
+
+
+// Form handling
+var loader = document.querySelector('.btn-loader');
+
+loader.style.display = 'none';
+
+document.querySelector('#form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const subject = document.querySelector('#subject').value;
+    const message = document.querySelector('#message').value;
+    const submit = document.querySelector('.submit');    
+
+    if (!name && (!email) || (!subject) && !message) {
+        alert('Please fill the required fields first');
+    }else {
+
+        loader.style.display = 'block';
+        submit.textContent = '';
+        submit.innerHTML = '<span class="btn-loader"></span>';
+
+        var params = {
+            name: document.querySelector('#name').value,
+            email: document.querySelector('#email').value,
+            subject: document.querySelector('#subject').value,
+            message: document.querySelector('#message').value
+        }
+
+        const serviceID = "service_23af2wk";
+        const templateID = "template_opjb08h";
+    
+        emailjs
+        .send(serviceID, templateID, params)
+        .then((res) => {
+            
+            loader.style.display = 'none';
+            submit.textContent = 'SEND';
+            document.querySelector('#name').value = '';
+            document.querySelector('#email').value = '';
+            document.querySelector('#subject').value = '';
+            document.querySelector('#message').value = '';
+            alert('Your message sent successfully');
+        })
+        .catch((err) => console.log(err));
+    }
+})

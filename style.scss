@@ -254,7 +254,7 @@ body {
 }
 .contact {
     .form {
-        input, textarea {
+        input, textarea, .btn {
             padding: 15px;
             background: transparent;
             border: 1px solid $secondaryColor;
@@ -274,6 +274,17 @@ body {
             font-size: 15px;
             font-family: $mabryFont;
         }
+        input[type="submit"] {
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+            &:hover {
+                box-shadow: unset !important;
+            }
+            &:focus {
+                box-shadow: unset !important;
+            }
+        }
         .btn {
             cursor: pointer;
             transition: all .8s ease;
@@ -281,6 +292,35 @@ body {
                 box-shadow: .25rem .25rem 0rem $secondaryColor;
             }
         }
+        .btn-loader {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            border: 2px solid $secondaryColor;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            &::after {
+                content: '';  
+                box-sizing: border-box;
+                position: absolute;
+                left: 4px;
+                top: 4px;
+                background: $secondaryColor;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+              }
+          }  
+          @keyframes rotation {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
     }
 }
 .cursor {
