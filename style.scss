@@ -187,11 +187,15 @@ body {
     }
 }
 .projects {
+    .projects-head {
+        transition: cubic-bezier(0.19, 1, 0.22, 1)3s;
+    }
     .project-box {
         position: relative;
         border: 1px solid $secondaryColor;
         border-radius: 4px;
         transition: box-shadow .5s ease;
+        transition: cubic-bezier(0.19, 1, 0.22, 1)3s;
         cursor: pointer;
         .project-img {
             width: 100%;
@@ -295,34 +299,15 @@ body {
         .btn-loader {
             width: 24px;
             height: 24px;
+            aspect-ratio: 1;
             border-radius: 50%;
-            display: inline-block;
-            position: relative;
-            border: 2px solid $secondaryColor;
-            box-sizing: border-box;
-            animation: rotation 1s linear infinite;
-            &::after {
-                content: '';  
-                box-sizing: border-box;
-                position: absolute;
-                left: 4px;
-                top: 4px;
-                background: $secondaryColor;
-                width: 7px;
-                height: 7px;
-                border-radius: 50%;
-              }
-          }  
-          @keyframes rotation {
-            0% {
-              transform: rotate(0deg);
+            border: 4px solid;
+            border-color: #000 #0000;
+            animation: l1 1s infinite;
+        }
+        @keyframes l1 {to{transform: rotate(.5turn)}}
             }
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-    }
-}
+        }
 .cursor {
     width: 40px;
     height: 40px;
