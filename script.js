@@ -37,62 +37,22 @@ window.onscroll = () => {
     prevScrollPos = currentScrollPos;
 };
 
-// Cursor js
-/*
-const cursor = document.querySelector('.cursor');
-const cursorDot = document.querySelector('.cursor-dot');
-
-const updateCursor = (e) => {
-    
-    cursor.style.top = e.pageY + 'px';
-    cursor.style.left = e.pageX + 'px';
-    cursorDot.style.top = e.pageY + 'px';
-    cursorDot.style.left = e.pageX + 'px';
-}
-
-const blackBg = document.querySelectorAll('.black-background');
-
-blackBg.forEach((bg) => {
-    bg.addEventListener('mouseenter', () => {
-        cursor.style.borderColor = '#ece7e1';
-        cursorDot.style.background = '#ece7e1';
-    
-})
-bg.addEventListener('mouseleave', () => {
-    cursor.style.borderColor = '#1a1818';
-    cursorDot.style.background = '#1a1818';
-})
-})
-
-const cursorOut = document.querySelectorAll('.cursor-out');
-
-cursorOut.forEach((out) => {
-    out.addEventListener('mouseenter', () => {
-        cursor.style.display = 'none';
-        cursorDot.style.display = 'none';
-        console.log('mouse enter')
-    
-})
-    out.addEventListener('mouseleave', () => {
-        cursor.style.display = 'block';
-        cursorDot.style.display = 'block';
-        console.log('mouse leave')
-
-})
-})
-
-
-window.addEventListener('mousemove', updateCursor);
-*/
-
 // GSAP Cursor
 const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
 
 // Function to update cursor position
 const updateCursor = (e) => {
-    gsap.to(cursor, { duration: 0.5, top: e.pageY, left: e.pageX });
-    gsap.to(cursorDot, { duration: 0.3, top: e.pageY, left: e.pageX });
+    gsap.to(cursor, { 
+        duration: 0.5, 
+        top: e.pageY, 
+        left: e.pageX 
+    });
+    gsap.to(cursorDot, { 
+        duration: 0.3, 
+        top: e.pageY, 
+        left: e.pageX 
+    });
 };
 
 // Event listeners for black-background elements
@@ -100,11 +60,25 @@ const blackBg = document.querySelectorAll('.black-background');
 
 blackBg.forEach((bg) => {
     bg.addEventListener('mouseenter', () => {
-        gsap.to([cursor, cursorDot], { duration: 0.3, borderColor: '#ece7e1', background: '#ece7e1' });
+        gsap.to(cursor, { 
+            duration: 0.3, 
+            borderColor: '#ece7e1', 
+        });
+        gsap.to(cursorDot, { 
+            duration: 0.3, 
+            background: '#ece7e1' 
+        });
     });
 
     bg.addEventListener('mouseleave', () => {
-        gsap.to([cursor, cursorDot], { duration: 0.3, borderColor: '#1a1818', background: '#1a1818' });
+        gsap.to(cursor, { 
+            duration: 0.3, 
+            borderColor: '#1a1818'
+        });
+        gsap.to(cursorDot, { 
+            duration: 0.3, 
+            background: '#1a1818' 
+        });
     });
 });
 

@@ -139,7 +139,7 @@ body {
         }
         .nav-link {
             opacity: 0;
-            transition: opacity .2s;
+            transition: opacity .3s;
         }
         &.active .nav-link {
             opacity: 1;
@@ -289,7 +289,6 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    // transition: all .3s ease-in-out;
     z-index: 9999;
 }
 .cursor-dot {
@@ -300,7 +299,6 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    // transition: all .2s ease-in-out;
     z-index: 9999;
 }
 @media screen and (max-width:576px) {
