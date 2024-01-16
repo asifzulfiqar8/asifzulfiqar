@@ -163,50 +163,37 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 })
 
 // Animation for header and hero banner
-const timeline = gsap.timeline({defaults: {
-    opacity: 0,
-    stragger: true
-}}) 
-
-timeline.from([".logo", ".hamburger"], {
+const timeline = gsap.timeline({
+    defaults: {
+      opacity: 0,
+      stagger: 1,
+    }
+  });
+  
+  timeline.from([".logo", ".hamburger"], {
     duration: 1,
     stagger: 0.3,
     y: -150,
-})
-timeline.from([".hello", ".intro", ".hero-para", ".git", ".linked-in", ".hero-btn"], {
-    duration: 1,
-    stagger: 0.3,
-    y: 50
-})
-timeline.from(".hero-img", {
-    duration: 1,
-    y: 100
-})
-timeline.from(".projects-heading", {
-    duration: 1,
-    y: -150
-})
-
-window.onload = () => {
-    timeline.play();
-}
-
-const otherSectionsTimeline = gsap.timeline({defaults: {
-    opacity: 0,
-    ease: 'power4.out',
-    duration: 1,
-    scrollTrigger: {
-        trigger: '#projects',
-        start: '-15% 50%',
-        end: '+=100%',
-        scrub: 1.3,
-        markers: true,
-        duration: 1
+  });
+  
+  timeline.from(
+    [
+      ".hello",
+      ".intro",
+      ".hero-para",
+      ".git",
+      ".linked-in",
+      ".hero-btn",
+      ".hero-img"
+    ],
+    {
+      duration: 1,
+      stagger: 0.3,
+      y: 50,
     }
-}})
-
-otherSectionsTimeline.from(['.projects-head', '.project-box'], {
-    duration: 1,
-    y: 250,
-    stagger: 1,
-})
+  );
+  
+  // Play the timelines when the window loads
+  window.onload = () => {
+    timeline.play();
+  };
