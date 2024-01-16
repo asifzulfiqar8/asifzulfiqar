@@ -38,6 +38,7 @@ window.onscroll = () => {
 };
 
 // Cursor js
+/*
 const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
 
@@ -81,4 +82,44 @@ cursorOut.forEach((out) => {
 })
 
 
+window.addEventListener('mousemove', updateCursor);
+*/
+
+// GSAP Cursor
+const cursor = document.querySelector('.cursor');
+const cursorDot = document.querySelector('.cursor-dot');
+
+// Function to update cursor position
+const updateCursor = (e) => {
+    gsap.to(cursor, { duration: 0.5, top: e.pageY, left: e.pageX });
+    gsap.to(cursorDot, { duration: 0.3, top: e.pageY, left: e.pageX });
+};
+
+// Event listeners for black-background elements
+const blackBg = document.querySelectorAll('.black-background');
+
+blackBg.forEach((bg) => {
+    bg.addEventListener('mouseenter', () => {
+        gsap.to([cursor, cursorDot], { duration: 0.3, borderColor: '#ece7e1', background: '#ece7e1' });
+    });
+
+    bg.addEventListener('mouseleave', () => {
+        gsap.to([cursor, cursorDot], { duration: 0.3, borderColor: '#1a1818', background: '#1a1818' });
+    });
+});
+
+// Event listeners for cursor-out elements
+const cursorOut = document.querySelectorAll('.cursor-out');
+
+cursorOut.forEach((out) => {
+    out.addEventListener('mouseenter', () => {
+        gsap.to([cursor, cursorDot], { duration: 0.3, autoAlpha: 0 });
+    });
+
+    out.addEventListener('mouseleave', () => {
+        gsap.to([cursor, cursorDot], { duration: 0.3, autoAlpha: 1 });
+    });
+});
+
+// Event listener for updating cursor position on mouse move
 window.addEventListener('mousemove', updateCursor);
