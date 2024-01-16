@@ -133,7 +133,7 @@ body {
         left: 0;
         height: 0;
         margin-top: -180px;
-        transition: height 1s ease-out;
+        transition: height cubic-bezier(0.19, 1, 0.22, 1)2s;
         &.active {
             height: 100vh;
             margin-top: 0;
@@ -240,9 +240,9 @@ body {
     overflow: hidden;
     .skills-items {
         height: 100%;
-        transition: all cubic-bezier(0.19, 1, 0.22, 1)2s;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)3s;
         h4 {
-            text-wrap: nowrap;
+            text-wrap: nowrap !important;
             color: $bgColor;
         }
         .text-stroke {
@@ -317,7 +317,7 @@ body {
     .skills {
         .skills-items {
             .text-stroke {
-                -webkit-text-stroke: 0.5px $bgColor;
+                -webkit-text-stroke: 0.8px $bgColor;
             }
         }
     }
