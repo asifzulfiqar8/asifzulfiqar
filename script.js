@@ -112,8 +112,30 @@ tl.to(".to-left", {
     marginLeft: "-40%",
 }, 'skills')
 tl.to(".to-right", {
-    marginRight: "-50%",
+    marginRight: "-60%",
 }, 'skills');
+tl.to(".to-left-last", {
+    marginLeft: "-90%",
+}, 'skills');
+
+// starting loader animation js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.initial-loader-main');
+
+    gsap.to(loader, {
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+        onComplete: hideLoader,
+    })
+});
+
+const hideLoader = () => {
+    const loader = document.querySelector('.initial-loader-main');
+
+    loader.style.display = 'none';
+}
 
 // Form handling
 var loader = document.querySelector('.btn-loader');
