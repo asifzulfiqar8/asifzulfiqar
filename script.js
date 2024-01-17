@@ -222,12 +222,19 @@ const timeline = gsap.timeline({
   };
 
 // Animation for smooth scrolling
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-let smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
-  smooth: 2.5, 
-  effects: true,
-  smoothTouch: 0.5,
-});
+// let smoother = ScrollSmoother.create({
+//   wrapper: '#smooth-wrapper',
+//   content: '#smooth-content',
+//   smooth: 2.5, 
+//   effects: true,
+//   smoothTouch: 2,
+// });
+  
+(function () {
+    const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('.scrollContainer'),
+        smooth: true
+    });
+})();

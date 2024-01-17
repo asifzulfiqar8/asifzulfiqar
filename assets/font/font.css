@@ -128,3 +128,16 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'GrandSlang-Roman';
+    src: url('GrandSlang-Roman.eot');
+    src: local('GrandSlang-Roman'), local('GrandSlang-Roman'),
+        url('GrandSlang-Roman.eot') format('embedded-opentype'),
+        url('GrandSlang-Roman.woff2') format('woff2'),
+        url('GrandSlang-Roman.woff') format('woff'),
+        url('GrandSlang-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
