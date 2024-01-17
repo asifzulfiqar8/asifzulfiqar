@@ -222,19 +222,25 @@ const timeline = gsap.timeline({
   };
 
 // Animation for smooth scrolling
+
+(function () {
+    const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('.scrollContainer'),
+        smooth: true,
+        smoothMobile: true,
+        scrollFromAnywhere: true,
+        touchMultiplier: 2,
+        inertia: 0.1,
+        Multiplier: 1
+    });
+})();
+
 // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // let smoother = ScrollSmoother.create({
 //   wrapper: '#smooth-wrapper',
 //   content: '#smooth-content',
-//   smooth: 2.5, 
+//   smooth: 1.5, 
 //   effects: true,
 //   smoothTouch: 2,
 // });
-  
-(function () {
-    const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector('.scrollContainer'),
-        smooth: true
-    });
-})();
