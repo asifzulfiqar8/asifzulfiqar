@@ -189,6 +189,7 @@ const timeline = gsap.timeline({
     defaults: {
       opacity: 0,
       stagger: 1,
+      delay: 0.7,
     }
   });
   
@@ -219,3 +220,13 @@ const timeline = gsap.timeline({
   window.onload = () => {
     timeline.play();
   };
+
+// Animation for smooth scrolling
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+let smoother = ScrollSmoother.create({
+  wrapper: '#smooth-wrapper',
+  content: '#smooth-content',
+  smooth: 2.5, 
+  effects: true
+});
