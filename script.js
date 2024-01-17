@@ -244,3 +244,41 @@ const timeline = gsap.timeline({
 //   effects: true,
 //   smoothTouch: 2,
 // });
+
+
+const tlForProjects = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#projects',
+        start: "30% 90%",
+        end: "60% 90%",
+        scrub: true,
+        markers: true,
+    }
+});
+
+tlForProjects.to('.projects-head', {
+    opacity: 100,
+    duration: 2,
+});
+tlForProjects.to('.project-box', {
+    opacity: 100,
+    duration: 3,
+    stagger: 2,
+});
+
+const tlForAbout = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#about',
+        start: "30% 90%",
+        end: "60% 90%",
+        scrub: true,
+        markers: true,
+    }
+});
+
+tlForAbout.to(['.about-heading', '.about-img', '.about-para'], {
+    opacity: 100,
+    duration: 4,
+    stagger: 3,
+});
+

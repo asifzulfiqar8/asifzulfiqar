@@ -195,6 +195,7 @@ body {
 .projects {
     .projects-head {
         transition: cubic-bezier(0.19, 1, 0.22, 1)3s;
+        opacity: 0;
     }
     .project-box {
         position: relative;
@@ -202,6 +203,7 @@ body {
         border-radius: 4px;
         transition: box-shadow .5s ease;
         transition: cubic-bezier(0.19, 1, 0.22, 1)3s;
+        opacity: 0;
         cursor: pointer;
         .project-img {
             width: 100%;
@@ -242,7 +244,7 @@ body {
             display: block;
         }
         &:hover .project-img, &:hover h4, &:hover p {
-            filter: blur(4px);
+            filter: blur(3px);
         }
     }
 }
@@ -261,6 +263,12 @@ body {
         }
     }
     
+}
+#about {
+    .about-heading, .about-img, .about-para {
+        opacity: 0;
+        transition: cubic-bezier(0.19, 1, 0.22, 1)2s;
+    }
 }
 .contact {
     .form {
