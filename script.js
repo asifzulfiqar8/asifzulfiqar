@@ -252,7 +252,7 @@ const tlForProjects = gsap.timeline({
         start: "30% 90%",
         end: "60% 90%",
         scrub: true,
-        markers: true,
+        // markers: true,
     }
 });
 
@@ -272,11 +272,27 @@ const tlForAbout = gsap.timeline({
         start: "30% 90%",
         end: "60% 90%",
         scrub: true,
-        markers: true,
+        // markers: true,
     }
 });
 
 tlForAbout.to(['.about-heading', '.about-img', '.about-para'], {
+    opacity: 100,
+    duration: 4,
+    stagger: 3,
+});
+
+const tlForContact = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#contact',
+        start: "40% 90%",
+        end: "60% 90%",
+        scrub: true,
+        markers: true,
+    }
+});
+
+tlForContact.to(['.contact-heading', '.contact-links', '.contact-para', '.contact-email', '#name', '#email', '#subject', "#message", '.button'], {
     opacity: 100,
     duration: 4,
     stagger: 3,

@@ -320,7 +320,12 @@ body {
             animation: l1 1s infinite;
         }
         @keyframes l1 {to{transform: rotate(.5turn)}}
-            }
+        }
+        .contact-heading, .contact-para, .contact-links, 
+        .contact-email, #name, #email, #subject, #message, .button {
+            opacity: 0;
+            transition: cubic-bezier(0.19, 1, 0.22, 1)2;
+        }
         }
 .cursor {
     width: 40px;

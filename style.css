@@ -329,6 +329,11 @@ body {
     transform: rotate(0.5turn);
   }
 }
+.contact .contact-heading, .contact .contact-para, .contact .contact-links,
+.contact .contact-email, .contact #name, .contact #email, .contact #subject, .contact #message, .contact .button {
+  opacity: 0;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 2;
+}
 
 .cursor {
   width: 40px;
