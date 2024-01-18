@@ -271,6 +271,9 @@ body {
     }
 }
 .contact {
+    .button {
+        transition: color .8s ease !important;
+    }
     .form {
         input, textarea, .btn {
             padding: 15px;
@@ -279,7 +282,7 @@ body {
             border-radius: 4px;
             color: $secondaryColor;
             font-size: 15px;
-            transition: box-shadow .8s ease;
+            transition: box-shadow .8s ease-in-out !important;
             &:focus {
                 outline: none;
                 box-shadow: .25rem .25rem 0rem $secondaryColor;

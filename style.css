@@ -273,6 +273,9 @@ body {
   transition: cubic-bezier(0.19, 1, 0.22, 1) 2s;
 }
 
+.contact .button {
+  transition: color 0.8s ease !important;
+}
 .contact .form input, .contact .form textarea, .contact .form .btn {
   padding: 15px;
   background: transparent;
@@ -280,7 +283,7 @@ body {
   border-radius: 4px;
   color: #1a1818;
   font-size: 15px;
-  transition: box-shadow 0.8s ease;
+  transition: box-shadow 0.8s ease-in-out !important;
 }
 .contact .form input:focus, .contact .form textarea:focus, .contact .form .btn:focus {
   outline: none;
