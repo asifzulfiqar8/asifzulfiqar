@@ -235,15 +235,15 @@ const timeline = gsap.timeline({
     });
 })();
 
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// let smoother = ScrollSmoother.create({
-//   wrapper: '#smooth-wrapper',
-//   content: '#smooth-content',
-//   smooth: 1.5, 
-//   effects: true,
-//   smoothTouch: 2,
-// });
+let smoother = ScrollSmoother.create({
+  wrapper: '#smooth-wrapper',
+  content: '#smooth-content',
+  smooth: 1.2, 
+  effects: true,
+  smoothTouch: 1.2,
+});
 
 
 const tlForProjects = gsap.timeline({
@@ -277,7 +277,7 @@ const tlForAbout = gsap.timeline({
     }
 });
 
-tlForAbout.to(['.about-heading', '.about-heading-one', '.about-img', '.about-para'], {
+tlForAbout.to(['.about-heading', '.about-img', '.about-heading-one', '.about-para'], {
     y: -10,
     opacity: 100,
     duration: 4,
@@ -295,7 +295,7 @@ const tlForContact = gsap.timeline({
     }
 });
 
-tlForContact.to(['.contact-heading', '.contact-links', '.contact-para', '.contact-email', '#name', '#email', '#subject', "#message", '.button'], {
+tlForContact.to(['.contact-heading', '.contact-para', '.contact-email', '.contact-links', '#name', '#email', '#subject', "#message", '.button'], {
     opacity: 100,
     duration: 4,
     stagger: 5,
