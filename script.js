@@ -235,15 +235,15 @@ const timeline = gsap.timeline({
     });
 })();
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-let smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
-  smooth: 1.2, 
-  effects: true,
-  smoothTouch: 1.2,
-});
+// let smoother = ScrollSmoother.create({
+//   wrapper: '#smooth-wrapper',
+//   content: '#smooth-content',
+//   smooth: 1.2, 
+//   effects: true,
+//   smoothTouch: 1.2,
+// });
 
 
 const tlForProjects = gsap.timeline({
