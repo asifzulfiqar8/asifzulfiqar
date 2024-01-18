@@ -261,9 +261,10 @@ tlForProjects.to('.projects-head', {
     duration: 2,
 });
 tlForProjects.to('.project-box', {
+    y: -10,
     opacity: 100,
-    duration: 3,
-    stagger: 2,
+    duration: 4,
+    stagger: 5,
 });
 
 const tlForAbout = gsap.timeline({
@@ -276,11 +277,13 @@ const tlForAbout = gsap.timeline({
     }
 });
 
-tlForAbout.to(['.about-heading', '.about-img', '.about-para'], {
+tlForAbout.to(['.about-heading', '.about-heading-one', '.about-img', '.about-para'], {
+    y: -10,
     opacity: 100,
     duration: 4,
-    stagger: 3,
+    stagger: 5,
 });
+
 
 const tlForContact = gsap.timeline({
     scrollTrigger: {
@@ -288,13 +291,13 @@ const tlForContact = gsap.timeline({
         start: "40% 90%",
         end: "60% 90%",
         scrub: true,
-        markers: true,
+        // markers: true,
     }
 });
 
 tlForContact.to(['.contact-heading', '.contact-links', '.contact-para', '.contact-email', '#name', '#email', '#subject', "#message", '.button'], {
     opacity: 100,
     duration: 4,
-    stagger: 3,
+    stagger: 5,
 });
 

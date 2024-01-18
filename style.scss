@@ -265,7 +265,7 @@ body {
     
 }
 #about {
-    .about-heading, .about-img, .about-para {
+    .about-heading, .about-heading-one, .about-img, .about-para {
         opacity: 0;
         transition: cubic-bezier(0.19, 1, 0.22, 1)2s;
     }
@@ -324,7 +324,7 @@ body {
         .contact-heading, .contact-para, .contact-links, 
         .contact-email, #name, #email, #subject, #message, .button {
             opacity: 0;
-            transition: cubic-bezier(0.19, 1, 0.22, 1)2;
+            transition: opacity 1s ease-in-out;
         }
         }
 .cursor {
