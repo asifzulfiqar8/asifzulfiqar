@@ -321,8 +321,8 @@ body {
         }
         @keyframes l1 {to{transform: rotate(.5turn)}}
         }
-        .contact-heading, .contact-para, .contact-links, 
-        .contact-email, #name, #email, #subject, #message, .button {
+        .contact-heading, .contact-para, .contact-email, .contact-links, 
+        #name, #email, #subject, #message, .button {
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }

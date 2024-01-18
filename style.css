@@ -329,8 +329,8 @@ body {
     transform: rotate(0.5turn);
   }
 }
-.contact .contact-heading, .contact .contact-para, .contact .contact-links,
-.contact .contact-email, .contact #name, .contact #email, .contact #subject, .contact #message, .contact .button {
+.contact .contact-heading, .contact .contact-para, .contact .contact-email, .contact .contact-links,
+.contact #name, .contact #email, .contact #subject, .contact #message, .contact .button {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
