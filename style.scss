@@ -101,6 +101,44 @@ body {
         transform: scale(100) translateX(2px);
       }
   }
+.button-bg {
+    height: 45px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid $bgColor;
+    overflow: hidden;
+    border-radius: 30px;
+    color: $bgColor;
+    transition: all .8s ease-in-out;
+    .btn-txt {
+        z-index: 1;
+        letter-spacing: 4px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 1s ease-in-out;
+        background-color: $bgColor;
+        border-radius: 30px;
+        visibility: hidden;
+        height: 10px;
+        width: 10px;
+        z-index: -1;
+      }
+      &:hover {
+        box-shadow: 2px 2px 150px $bgColor;
+        color: $secondaryColor;
+        // border: none;
+      }
+      &:hover::after {
+        visibility: visible;
+        transform: scale(100) translateX(2px);
+      }
+  }
 .header {
     position: sticky;
     top: 0;
@@ -109,7 +147,7 @@ body {
     .logo {
         z-index: 9;
         color: $bgColor;
-        font-family: $mabryFont;
+        font-family: $grandSlangFont;
     }
     .hamburger {
         cursor: pointer;
