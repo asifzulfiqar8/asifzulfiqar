@@ -29,7 +29,7 @@ window.onscroll = () => {
     const currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos > currentScrollPos) {
-        navbar.style.top = '0';
+        navbar.style.top = '-1px';
     } else {
         navbar.style.top = `-${navbar.offsetHeight}px`;
     }
