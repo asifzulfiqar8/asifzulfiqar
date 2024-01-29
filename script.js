@@ -193,9 +193,10 @@ const timeline = gsap.timeline({
     }
   });
   
-  timeline.from([".logo", ".hamburger"], {
+  timeline.from([".logo", ".hamburger", ".d-nav-link"], {
     duration: 1,
     stagger: 0.3,
+    opacity: 1,
     y: -150,
   });
   
