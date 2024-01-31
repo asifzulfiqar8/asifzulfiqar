@@ -250,7 +250,7 @@ const timeline = gsap.timeline({
 const tlForProjects = gsap.timeline({
     scrollTrigger: {
         trigger: '#projects',
-        start: "30% 90%",
+        start: "20% 90%",
         end: "60% 90%",
         scrub: true,
         // markers: true,
