@@ -150,8 +150,8 @@ document.querySelector('#form').addEventListener('submit', (e) => {
     const message = document.querySelector('#message').value;
     const submit = document.querySelector('.submit');    
 
-    if (!name && (!email) || (!subject) && !message) {
-        alert('Please fill the required fields first');
+    if (!name || !email || !subject || !message) {
+        alert('Please fill out all the required fields');
     }else {
 
         loader.style.display = 'block';
