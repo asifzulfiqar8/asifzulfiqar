@@ -104,8 +104,8 @@ const tl = gsap.timeline({scrollTrigger:{
     duration: 0.8,
     trigger: '.skills',
     start: "0% 90%",
-    end: "450% 90%",
-    scrub: true
+    end: "750% 100%",
+    scrub: true,
 }})
 
 tl.to(".to-left", {
