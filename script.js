@@ -155,7 +155,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
     }else {
 
         loader.style.display = 'block';
-        submit.textContent = '';
+        submit.textContent = 'SENDING';
         submit.innerHTML = '<span class="btn-loader"></span>';
 
         var params = {
@@ -181,7 +181,6 @@ document.querySelector('#form').addEventListener('submit', (e) => {
             document.querySelector('#email').value = '';
             document.querySelector('#subject').value = '';
             document.querySelector('#message').value = '';
-            alert('Your message sent successfully');
         })
         .catch((err) => console.log(err));
     }
