@@ -173,7 +173,10 @@ document.querySelector('#form').addEventListener('submit', (e) => {
         .then((res) => {
             
             loader.style.display = 'none';
-            submit.textContent = 'SEND';
+            submit.textContent = 'Sent Successfully';
+            setTimeout(() => {
+                submit.textContent = 'SEND';
+            }, 3000);
             document.querySelector('#name').value = '';
             document.querySelector('#email').value = '';
             document.querySelector('#subject').value = '';
