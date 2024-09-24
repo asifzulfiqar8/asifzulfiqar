@@ -1,3 +1,5 @@
+import CONFIG from './config.js'
+
 // Hamburger JS
 const hamburger = document.querySelector('.hamburger');
 
@@ -139,7 +141,6 @@ const hideLoader = () => {
 
 // Form handling
 var loader = document.querySelector('.btn-loader');
-
 loader.style.display = 'none';
 
 document.querySelector('#form').addEventListener('submit', (e) => {
@@ -165,8 +166,8 @@ document.querySelector('#form').addEventListener('submit', (e) => {
             message: document.querySelector('#message').value
         }
 
-        const serviceID = "service_23af2wk";
-        const templateID = "template_opjb08h";
+        const serviceID = CONFIG.SERVICEID;
+        const templateID = CONFIG.TEMPLATEID;
     
         emailjs
         .send(serviceID, templateID, params)
